@@ -6,16 +6,16 @@
 #include <gtest/gtest.h>
 using namespace std; 
 
-
+Helperfunctions h;
 
 TEST(SQTest, PositiveNos){
-	Helperfunctions h;
+
 	ASSERT_EQ(6,sqrt(36.0));
 }
 
 TEST(DistanceXYTest, RationalCheck){
-	Helperfunctions h;
-	ASSERT_EQ(sqrt(8),h.DistanceXY(1,2,3,4)){
+
+	ASSERT_EQ(sqrt(8),h.DistanceXY(1,2,3,4));
 }
 
 int main (int argc, char **argv) 
