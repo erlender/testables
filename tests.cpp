@@ -9,17 +9,17 @@ using namespace std;
 
 
 TEST(SQTest, PositiveNos){
-ASSERT_EQ(6,sqrt(36.0));
+	ASSERT_EQ(6,sqrt(36.0));
 }
 
-TEST(SQTest, NegativeNos){
-ASSERT_EQ(-1.0,sqrt(-15.0));
+TEST(DistanceXY, RationalCheck){
+	ASSERT_EQ(sqrt(8),h.DistanceXY(1,2,3,4){
 }
 
 int main (int argc, char **argv) 
 {
 	Helperfunctions h;
-	h.TestAllFunctions();
+//	h.TestAllFunctions();
         string s="Erlend";
 
 
