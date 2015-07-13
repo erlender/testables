@@ -3,7 +3,7 @@ compiler:
   - g++
 
 #script: make && make test
-script:g++ test.cc
+script: g++ test.cc
 notifications:
   email:
     recipients:
