@@ -2,6 +2,7 @@ language: cpp
 compiler:
   - g++
 script: g++ test.cc helperfunctions.cc
+./a.out
 notifications:
   email:
     recipients:
