@@ -13,7 +13,7 @@ TEST(SQTest, PositiveNos){
 }
 
 TEST(DistanceXY, RationalCheck){
-	ASSERT_EQ(sqrt(8),h.DistanceXY(1,2,3,4){
+	ASSERT_EQ(sqrt(8),h.DistanceXY(1,2,3,4)){
 }
 
 int main (int argc, char **argv) 
