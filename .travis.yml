@@ -1,7 +1,7 @@
 language: cpp
 compiler:
   - g++
-script: g++ test.cc
+script: g++ test.cc helperfunctions.cc
 notifications:
   email:
     recipients:
