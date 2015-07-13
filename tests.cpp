@@ -1,4 +1,4 @@
-//#include "helperfunctions.h"
+#include "helperfunctions.h"
 
 #include <iostream>
 #include <string>
@@ -18,8 +18,8 @@ ASSERT_EQ(-1.0,sqrt(-15.0));
 
 int main (int argc, char **argv) 
 {
-//	Helperfunctions h;
-//	h.TestAllFunctions();
+	Helperfunctions h;
+	h.TestAllFunctions();
         string s="Erlend";
 
 
