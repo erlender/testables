@@ -1,8 +1,9 @@
 language: cpp
 compiler:
-  - gcc
-  - clang
-script: make && make test
+  - g++
+
+#script: make && make test
+script:g++ test.cc
 notifications:
   email:
     recipients:
