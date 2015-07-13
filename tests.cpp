@@ -12,7 +12,7 @@ TEST(SQTest, PositiveNos){
 	ASSERT_EQ(6,sqrt(36.0));
 }
 
-TEST(DistanceXY, RationalCheck){
+TEST(DistanceXYTest, RationalCheck){
 	ASSERT_EQ(sqrt(8),h.DistanceXY(1,2,3,4)){
 }
 
