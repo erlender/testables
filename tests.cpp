@@ -38,7 +38,7 @@ TEST(ConnectedEstimation, GroundEle) {
 TEST(ConnectedEstimation, EleEle) {
 	Helperfunctions h;
 	ASSERT_TRUE(h.ConnectedEstimation(0,0,600,1000,1000,600));
-	ASSERT_TRUE(h.ConnectedEstimation(0,0,600,3000,0,600));
+	ASSERT_TRUE(h.ConnectedEstimation(0,0,600,2999,0,600));
 	ASSERT_FALSE(h.ConnectedEstimation(0,0,600,4000,0,600));
 }
 
