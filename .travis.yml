@@ -8,7 +8,7 @@ script: ./installscr.sh && cmake CMakeLists.txt && make && ./tests
 notifications:
   email:
     recipients:
-      - user1@somewhere.com
+      - erlender@gmail.com
       - user2@somewhere.com
     on_success: change
     on_failure: always
