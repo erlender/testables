@@ -1,11 +1,6 @@
-html/
-scratch/statsscript/kmlgen.cc
-scratch/statsscript/kmlgen.h
-scratch/statsscript/load3.kml
-scratch/statsscript/CMakeCache.txt
-
-scratch/statsscript/CMakeFiles/
-scratch/statsscript/Makefile
-scratch/statsscript/cmake_install.cmake
-scratch/statsscript/tests
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+tests
 
