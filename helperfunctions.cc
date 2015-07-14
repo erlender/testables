@@ -15,9 +15,6 @@
  * Calculates the Elevation angle for object 1 towards object 2.
  */
 
-Helperfunctions::Helperfunctions(){
-	TestAllFunctions();
-}
 
 double Helperfunctions::CommElevationAngleXYZ(double x1, double y1, double z1, double x2, double y2, double z2) {
 // Calculate vector from object 1 to object 2
@@ -49,26 +46,30 @@ double Helperfunctions::CommDistanceXYZ(double x1, double y1, double z1, double 
 	return meters;
 }
 
+double Helperfunctions::DistanceXY(double x1, double y1, double x2, double y2) {
+	double dx = x1 - x2;
+	double dy = y1 - y2;
 
-double Helperfunctions::DistanceXY(double x1,double y1, double x2,double y2){
-	double dx=x1-x2;
-	double dy=y1-y2;
-
-	return sqrt(dx*dx+dy*dy);
+	return sqrt(dx * dx + dy * dy);
 }
 
-bool Helperfunctions::ConnectedEstimation(double x1, double y1, double z1, double x2, double y2, double z2){
-	if (std::abs(z1-z2)==598 && DistanceXY(x1,y1,x2,y2)<3500) return true;
-	if (std::abs(z1-z2)==0 &&z1==600 && DistanceXY(x1,y1,x2,y2)<3500) return true;
-	if (std::abs(z1-z2)==0 &&z1==2 && DistanceXY(x1,y1,x2,y2)<500) return true;
+
+/**
+ * Function to estimate whether two nodes will have connectivity. Should be improved.
+ */
+bool Helperfunctions::ConnectedEstimation(double x1, double y1, double z1, double x2, double y2, double z2) {
+	if (std::abs(z1 - z2) >= 500 && DistanceXY(x1, y1, x2, y2) < 3000)
+		return true;
+	if (std::abs(z1 - z2) < 500 && z1 > 500 && DistanceXY(x1, y1, x2, y2) < 3000)
+		return true;
+	if (std::abs(z1 - z2) < 500 && z1 <= 500 && DistanceXY(x1, y1, x2, y2) < 500)
+		return true;
 	return false;
 }
 
+/**
+ * Simple function to calculate an average value from two numbers.
+ */
 double Helperfunctions::Mean(double x1, double x2) {
 	return (x1 + x2) / 2.0;
-}
-
-void Helperfunctions::TestAllFunctions()
-{
-	assert(DistanceXY(1,2,3,4)==sqrt(8));
 }
