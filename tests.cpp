@@ -22,9 +22,24 @@ TEST(DistanceXY, RationalCheck) {
 	ASSERT_EQ(sqrt(8), h.DistanceXY(1,2,3,4));
 }
 
-TEST(ConnectedEstimation, RationalCheck) {
+TEST(ConnectedEstimation, GroundGround) {
 	Helperfunctions h;
 	ASSERT_TRUE(h.ConnectedEstimation(1,2,3,4,5,6));
+	ASSERT_TRUE(h.ConnectedEstimation(0,0,2,400,0,2));
+	ASSERT_FALSE(h.ConnectedEstimation(0,0,2,1000,0,2));
+}
+
+TEST(ConnectedEstimation, GroundEle) {
+	Helperfunctions h;
+	ASSERT_TRUE(h.ConnectedEstimation(0,0,2,2000,0,600));
+	ASSERT_FALSE(h.ConnectedEstimation(0,0,2,4000,0,600));
+}
+
+TEST(ConnectedEstimation, EleEle) {
+	Helperfunctions h;
+	ASSERT_TRUE(h.ConnectedEstimation(0,0,600,1000,1000,600));
+	ASSERT_TRUE(h.ConnectedEstimation(0,0,600,3000,0,600));
+	ASSERT_FALSE(h.ConnectedEstimation(0,0,600,4000,0,600));
 }
 
 TEST(Mean, PositiveNos) {
